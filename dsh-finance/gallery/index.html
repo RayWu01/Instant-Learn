@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>财务自由 · 资料库</title>
+<style>
+  :root {
+    --bg: #f6f5f1;
+    --card: #ffffff;
+    --ink: #1c1b18;
+    --muted: #8a877e;
+    --line: #e7e4dc;
+    --accent: #0f766e;
+    --accent-soft: #e6f2f0;
+    --amber: #b45309;
+    --amber-soft: #fdf3e3;
+    --radius: 12px;
+    --shadow: 0 1px 2px rgba(28,27,24,.04);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .app { display: grid; grid-template-columns: 224px minmax(0, 1fr); height: 100vh; }
+
+  /* ---------- sidebar ---------- */
+  .sidebar {
+    background: #fbfaf7;
+    border-right: 1px solid var(--line);
+    padding: 20px 14px;
+    overflow-y: auto;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; padding: 2px 8px 16px; }
+  .brand .logo {
+    width: 30px; height: 30px; border-radius: 8px; flex: 0 0 auto;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 16px; font-weight: 700;
+  }
+  .brand .name { font-weight: 650; font-size: 16px; }
+  .brand .sub { font-size: 12px; color: var(--muted); }
+  .nav { display: flex; flex-direction: column; gap: 2px; }
+  .nav a {
+    display: flex; align-items: center; gap: 9px;
+    padding: 8px 10px; border-radius: 8px; color: var(--ink);
+    font-size: 14px; transition: background .12s;
+  }
+  .nav a:hover { background: #efede7; text-decoration: none; }
+  .nav a.active { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+  .nav a .ic { width: 18px; text-align: center; }
+  .nav a .cnt { margin-left: auto; font-size: 11px; color: var(--muted); background: #efece5; border-radius: 20px; padding: 1px 7px; }
+  .nav a.active .cnt { background: #d3e6e2; color: var(--accent); }
+  .side-foot { margin-top: 16px; padding: 10px 8px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); }
+
+  /* ---------- main ---------- */
+  .main { overflow-y: auto; padding: 22px 30px 80px; scroll-behavior: smooth; }
+  .topbar { position: sticky; top: 0; z-index: 5; background: linear-gradient(var(--bg) 70%, transparent); padding: 4px 0 10px; }
+  .search {
+    width: 100%; padding: 11px 14px 11px 40px; font-size: 14px;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    outline: none; color: var(--ink);
+  }
+  .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(15,118,110,.12); }
+  .search-wrap { position: relative; }
+  .search-wrap .mag { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--muted); font-size: 15px; }
+  .search-clear { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); border: 0; background: #eceae3; border-radius: 50%; width: 20px; height: 20px; cursor: pointer; color: var(--muted); display: none; }
+  .search-clear.show { display: block; }
+
+  section { margin-top: 26px; scroll-margin-top: 84px; }
+  .sec-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+  .sec-head h2 { margin: 0; font-size: 19px; font-weight: 680; }
+  .sec-head .desc { color: var(--muted); font-size: 13px; }
+
+  /* hero */
+  .hero { padding: 6px 2px 2px; }
+  .hero h1 { margin: 0 0 6px; font-size: 24px; font-weight: 720; letter-spacing: -.01em; }
+  .hero .tagline { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+  .roadmap { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin: 4px 0 18px; }
+  .roadmap .step { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 5px 14px; font-size: 13px; }
+  .roadmap .step.cur { background: var(--accent); color: #fff; border-color: var(--accent); font-weight: 600; }
+  .roadmap .arrow { color: var(--muted); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+  .stat .k { font-size: 12px; color: var(--muted); }
+  .stat .v { font-size: 22px; font-weight: 700; margin-top: 2px; }
+  .stat .v small { font-size: 13px; color: var(--muted); font-weight: 500; }
+  .stat .bar { height: 4px; background: #ece9e1; border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .stat .bar i { display: block; height: 100%; background: var(--accent); border-radius: 2px; }
+
+  /* groups */
+  .group-label { font-size: 12.5px; font-weight: 650; color: var(--accent); text-transform: uppercase; letter-spacing: .04em; margin: 18px 0 8px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+
+  /* cards */
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 15px 16px; box-shadow: var(--shadow); position: relative;
+    display: flex; flex-direction: column; gap: 7px;
+  }
+  .card.hidden { display: none; }
+  .card .top { display: flex; align-items: flex-start; gap: 9px; }
+  .card .title { font-weight: 650; font-size: 15px; line-height: 1.4; flex: 1; }
+  .card .score { flex: 0 0 auto; font-size: 12px; font-weight: 650; color: var(--amber); background: var(--amber-soft); border-radius: 6px; padding: 1px 7px; }
+  .card .meta { color: var(--muted); font-size: 12.5px; }
+  .card .blurb { color: #4b4943; font-size: 13.5px; }
+  .card .actions { display: flex; align-items: center; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+  button.chip {
+    border: 1px solid var(--line); background: #faf9f6; color: var(--ink);
+    border-radius: 7px; padding: 3px 10px; font-size: 12.5px; cursor: pointer; transition: all .12s;
+  }
+  button.chip:hover { border-color: #cfccc2; }
+  button.chip.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.chip.star { font-size: 13px; padding: 3px 9px; }
+  button.chip.star.on { background: var(--amber-soft); border-color: #e7c58e; color: var(--amber); }
+  .ext { display: inline-flex; align-items: center; gap: 4px; font-size: 12.5px; }
+
+  .note-box { display: none; margin-top: 6px; }
+  .note-box.open { display: block; }
+  .note-box textarea {
+    width: 100%; min-height: 58px; resize: vertical; font: inherit; font-size: 13px;
+    border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: #fcfbf9; color: var(--ink);
+  }
+  .note-box textarea:focus { outline: none; border-color: var(--accent); }
+
+  /* web3 / forum list */
+  .list { display: flex; flex-direction: column; gap: 8px; }
+  .row {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 11px 14px; display: flex; align-items: center; gap: 12px;
+  }
+  .row.hidden { display: none; }
+  .row .grow { flex: 1; min-width: 0; }
+  .row .nm { font-weight: 620; font-size: 14px; }
+  .row .nt { color: var(--muted); font-size: 12.5px; }
+  .row .acts { display: flex; gap: 6px; flex: 0 0 auto; }
+
+  .empty { color: var(--muted); font-size: 13px; padding: 20px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); }
+
+  /* records */
+  .records-toolbar { display: flex; gap: 8px; margin-bottom: 14px; }
+  .records-toolbar button { border: 1px solid var(--line); background: #fff; border-radius: 8px; padding: 6px 14px; font-size: 13px; cursor: pointer; }
+  .records-toolbar button:hover { border-color: #cfccc2; }
+  .records-toolbar button.danger:hover { border-color: #e0a7a7; color: #b02a2a; }
+  .rec-group { margin-bottom: 20px; }
+  .rec-item { display: flex; align-items: center; gap: 10px; padding: 9px 2px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .rec-item .badge { font-size: 11px; border-radius: 5px; padding: 1px 7px; background: #eceae3; color: var(--muted); flex: 0 0 auto; }
+  .rec-item .badge.done { background: var(--accent-soft); color: var(--accent); }
+  .rec-item .badge.star { background: var(--amber-soft); color: var(--amber); }
+  .rec-item .rn { flex: 1; }
+  .rec-item .note { color: var(--muted); font-size: 12.5px; font-style: italic; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%) translateY(20px);
+    background: #1c1b18; color: #fff; padding: 9px 18px; border-radius: 8px; font-size: 13px;
+    opacity: 0; pointer-events: none; transition: all .2s; z-index: 99;
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .no-result { display: none; text-align: center; color: var(--muted); padding: 30px 0; font-size: 14px; }
+  .no-result.show { display: block; }
+
+  @media (max-width: 760px) {
+    .app { grid-template-columns: 1fr; height: auto; }
+    .sidebar { position: sticky; top: 0; z-index: 6; border-right: 0; border-bottom: 1px solid var(--line); padding: 10px 12px; }
+    .brand { padding: 2px 4px 8px; }
+    .nav { flex-direction: row; overflow-x: auto; gap: 6px; padding-bottom: 4px; }
+    .nav a { white-space: nowrap; padding: 6px 10px; }
+    .nav a .cnt { display: none; }
+    .side-foot { display: none; }
+    .main { padding: 16px 14px 80px; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">¥</div>
+      <div>
+        <div class="name">财务自由</div>
+        <div class="sub">赚钱 · 投资资料库</div>
+      </div>
+    </div>
+    <nav class="nav" id="nav"></nav>
+    <div class="side-foot">资料整理自<br /><a id="src-link" target="_blank" rel="noopener">GitHub 仓库</a> · 进度保存在本地</div>
+  </aside>
+
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="search-wrap">
+        <span class="mag">🔍</span>
+        <input class="search" id="search" type="text" placeholder="搜索书、纪录片、博主、工具……" autocomplete="off" />
+        <button class="search-clear" id="search-clear" title="清空">×</button>
+      </div>
+    </div>
+    <div id="content"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  'use strict'
+
+  const BASE = location.pathname.replace(/\/$/, '')
+  const DATA_URL = BASE + '/data.json'
+  const LS_KEY = 'dsh.finance.v1'
+  const STATUS = {
+    books: ['none', 'want', 'doing', 'done'],
+    docs: ['none', 'want', 'doing', 'done'],
+  }
+  const STATUS_LABEL = {
+    books: { none: '未读', want: '想看', doing: '在读', done: '读完' },
+    docs: { none: '未看', want: '想看', doing: '在看', done: '看完' },
+  }
+
+  const $ = (s, el = document) => el.querySelector(s)
+  const $$ = (s, el = document) => Array.from(el.querySelectorAll(s))
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]))
+  const slug = (s) => String(s ?? '').replace(/[^\w\u4e00-\u9fa5]/g, '')
+
+  let DATA = null
+  let store = loadStore()
+
+  function loadStore() {
+    try { return JSON.parse(localStorage.getItem(LS_KEY)) || { items: {} } }
+    catch { return { items: {} } }
+  }
+  function saveStore() {
+    localStorage.setItem(LS_KEY, JSON.stringify(store))
+    renderOverview()
+  }
+  function rec(id) {
+    if (!store.items[id]) store.items[id] = {}
+    return store.items[id]
+  }
+
+  function toast(msg) {
+    const t = $('#toast')
+    t.textContent = msg
+    t.classList.add('show')
+    clearTimeout(t._h)
+    t._h = setTimeout(() => t.classList.remove('show'), 1600)
+  }
+
+  function itemId(section, key) { return section + ':' + slug(key) }
+
+  // ---------- render ----------
+  function renderNav() {
+    const navs = [
+      ['overview', '🧭', '总览', null],
+      ['books', '📚', '书单', DATA.books.length],
+      ['docs', '🎬', '纪录片', DATA.docs.length],
+      ['youtubers', '📺', '美股博主', DATA.youtubers.length],
+      ['forums', '🗂', '论坛工具', DATA.forums.length],
+      ['web3', '💹', 'Web3 工具', totalWeb3()],
+      ['records', '📝', '我的记录', null],
+    ]
+    $('#nav').innerHTML = navs.map(([id, ic, label, cnt]) =>
+      `<a href="#${id}" data-nav="${id}"><span class="ic">${ic}</span>${label}` +
+      (cnt != null ? `<span class="cnt">${cnt}</span>` : '') + `</a>`).join('')
+    $('#src-link').href = DATA.meta.source
+  }
+
+  function totalWeb3() {
+    return DATA.web3.reduce((n, g) => n + g.items.length, 0)
+  }
+
+  function renderOverview() {
+    const books = DATA.books, docs = DATA.docs
+    const bDone = books.filter(b => (store.items[itemId('books', b.title)] || {}).status === 'done').length
+    const dDone = docs.filter(d => (store.items[itemId('docs', d.title)] || {}).status === 'done').length
+    const yStar = DATA.youtubers.filter(y => (store.items[itemId('yt', y.name)] || {}).starred).length
+    const tStar = DATA.forums.filter(f => (store.items[itemId('forum', f.name)] || {}).starred).length
+      + DATA.web3.reduce((n, g) => n + g.items.filter(i => (store.items[itemId('web3', g.group + i.name)] || {}).starred).length, 0)
+    const notes = Object.values(store.items).filter(i => i.note && i.note.trim()).length
+
+    const roadmap = DATA.meta.roadmap.map((s, i) =>
+      `<span class="step${i === 0 ? ' cur' : ''}">${esc(s)}</span>` + (i < DATA.meta.roadmap.length - 1 ? `<span class="arrow">→</span>` : '')).join('')
+
+    const stat = (label, val, den, pct) => `
+      <div class="stat">
+        <div class="k">${label}</div>
+        <div class="v">${val}<small> / ${den}</small></div>
+        <div class="bar"><i style="width:${pct}%"></i></div>
+      </div>`
+
+    $('#overview').innerHTML = `
+      <div class="hero">
+        <h1>${esc(DATA.meta.title)}</h1>
+        <p class="tagline">${esc(DATA.meta.tagline)}</p>
+        <div class="roadmap">${roadmap}</div>
+      </div>
+      <div class="stats">
+        ${stat('书单已读', bDone, books.length, Math.round(bDone / books.length * 100))}
+        ${stat('纪录片已看', dDone, docs.length, Math.round(dDone / docs.length * 100))}
+        ${stat('收藏博主', yStar, DATA.youtubers.length, Math.round(yStar / DATA.youtubers.length * 100))}
+        ${stat('收藏工具/论坛', tStar, DATA.forums.length + totalWeb3(), '')}
+        ${stat('笔记', notes, '', '')}
+      </div>`
+  }
+
+  function renderSections() {
+    const c = $('#content')
+    c.innerHTML = `
+      <section id="overview"></section>
+      <section id="books"></section>
+      <section id="docs"></section>
+      <section id="youtubers"></section>
+      <section id="forums"></section>
+      <section id="web3"></section>
+      <section id="records"></section>
+      <div class="no-result" id="no-result">没有匹配的内容，换个关键词试试。</div>`
+    renderOverview()
+    renderBooks()
+    renderDocs()
+    renderYoutubers()
+    renderForums()
+    renderWeb3()
+    renderRecords()
+    bindCards()
+  }
+
+  function renderBooks() {
+    const tiers = ['入门', '进阶', '高级']
+    const html = tiers.map(t => {
+      const items = DATA.books.filter(b => b.tier === t)
+      return `<div class="group-label">${t}</div><div class="grid">` +
+        items.map(b => bookCard(b)).join('') + `</div>`
+    }).join('')
+    $('#books').innerHTML = `<div class="sec-head"><h2>📚 投资书单</h2><span class="desc">${DATA.books.length} 本 · 分入门 / 进阶 / 高级三档</span></div>` + html
+  }
+
+  function bookCard(b) {
+    const id = itemId('books', b.title)
+    const r = store.items[id] || {}
+    const st = STATUS_LABEL.books[r.status || 'none']
+    return `
+      <div class="card" data-item="${id}" data-search="${esc(b.title + ' ' + b.author)}">
+        <div class="top"><span class="title">${esc(b.title)}</span><span class="score">豆瓣 ${b.score}</span></div>
+        <div class="meta">${esc(b.author)}${b.pdf ? ` · <a class="ext" href="${esc(b.pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ''}</div>
+        <div class="blurb">${esc(b.blurb)}</div>
+        <div class="actions">
+          <button class="chip status ${r.status && r.status !== 'none' ? 'on' : ''}" data-act="status">${st}</button>
+          <button class="chip star ${r.starred ? 'on' : ''}" data-act="star">${r.starred ? '★ 已收藏' : '☆ 收藏'}</button>
+          <button class="chip note ${r.note ? 'on' : ''}" data-act="note">📝 笔记</button>
+        </div>
+        <div class="note-box ${r.note ? 'open' : ''}">
+          <textarea placeholder="写两句……" data-act="note-input">${esc(r.note || '')}</textarea>
+        </div>
+      </div>`
+  }
+
+  function renderDocs() {
+    $('#docs').innerHTML = `<div class="sec-head"><h2>🎬 高分纪录片</h2><span class="desc">${DATA.docs.length} 部 · 附在线观看链接</span></div>` +
+      `<div class="grid">` + DATA.docs.map(d => docCard(d)).join('') + `</div>`
+  }
+
+  function docCard(d) {
+    const id = itemId('docs', d.title)
+    const r = store.items[id] || {}
+    const st = STATUS_LABEL.docs[r.status || 'none']
+    return `
+      <div class="card" data-item="${id}" data-search="${esc(d.title + ' ' + d.en)}">
+        <div class="top"><span class="title">${esc(d.title)}${d.en ? ` <small style="color:var(--muted);font-weight:500">${esc(d.en)}</small>` : ''}</span><span class="score">豆瓣 ${d.score}</span></div>
+        <div class="meta">${esc(d.meta)} · <a class="ext" href="${esc(d.link)}" target="_blank" rel="noopener">在线观看 ↗</a></div>
+        <div class="blurb">${esc(d.blurb)}</div>
+        <div class="actions">
+          <button class="chip status ${r.status && r.status !== 'none' ? 'on' : ''}" data-act="status">${st}</button>
+          <button class="chip star ${r.starred ? 'on' : ''}" data-act="star">${r.starred ? '★ 已收藏' : '☆ 收藏'}</button>
+          <button class="chip note ${r.note ? 'on' : ''}" data-act="note">📝 笔记</button>
+        </div>
+        <div class="note-box ${r.note ? 'open' : ''}">
+          <textarea placeholder="写两句……" data-act="note-input">${esc(r.note || '')}</textarea>
+        </div>
+      </div>`
+  }
+
+  function renderYoutubers() {
+    $('#youtubers').innerHTML = `<div class="sec-head"><h2>📺 美股 YouTuber</h2><span class="desc">${DATA.youtubers.length} 个频道</span></div>` +
+      `<div class="grid">` + DATA.youtubers.map(y => youtuberCard(y)).join('') + `</div>`
+  }
+
+  function youtuberCard(y) {
+    const id = itemId('yt', y.name)
+    const r = store.items[id] || {}
+    return `
+      <div class="card" data-item="${id}" data-search="${esc(y.name + ' ' + y.tag)}">
+        <div class="top"><span class="title">${esc(y.name)}</span><span class="score">${esc(y.tag || '')}</span></div>
+        <div class="blurb">${esc(y.blurb)}</div>
+        <div class="actions">
+          <a class="chip ext" href="${esc(y.link)}" target="_blank" rel="noopener">频道 ↗</a>
+          <button class="chip star ${r.starred ? 'on' : ''}" data-act="star">${r.starred ? '★ 已收藏' : '☆ 收藏'}</button>
+          <button class="chip note ${r.note ? 'on' : ''}" data-act="note">📝 笔记</button>
+        </div>
+        <div class="note-box ${r.note ? 'open' : ''}">
+          <textarea placeholder="写两句……" data-act="note-input">${esc(r.note || '')}</textarea>
+        </div>
+      </div>`
+  }
+
+  function renderForums() {
+    $('#forums').innerHTML = `<div class="sec-head"><h2>🗂 美股论坛 · 工具站</h2><span class="desc">${DATA.forums.length} 个</span></div>` +
+      `<div class="list">` + DATA.forums.map(f => row(f.name, f.blurb, f.link, itemId('forum', f.name), true)).join('') + `</div>`
+  }
+
+  function renderWeb3() {
+    const groups = DATA.web3.map(g =>
+      `<div class="group-label">${esc(g.group)}</div><div class="list">` +
+      g.items.map(i => row(i.name, i.note, i.link, itemId('web3', g.group + i.name), true)).join('') + `</div>`).join('')
+    $('#web3').innerHTML = `<div class="sec-head"><h2>💹 Web3 · 区块链工具</h2><span class="desc">${DATA.web3.length} 类 · ${totalWeb3()} 个站点</span></div>` + groups
+  }
+
+  function row(name, note, link, id, starrable) {
+    const r = store.items[id] || {}
+    return `
+      <div class="row" data-item="${id}" data-search="${esc(name + ' ' + note)}">
+        <div class="grow"><div class="nm">${esc(name)}</div>${note ? `<div class="nt">${esc(note)}</div>` : ''}</div>
+        <div class="acts">
+          <a class="chip ext" href="${esc(link)}" target="_blank" rel="noopener">打开 ↗</a>
+          ${starrable ? `<button class="chip star ${r.starred ? 'on' : ''}" data-act="star">${r.starred ? '★' : '☆'}</button>` : ''}
+          <button class="chip note ${r.note ? 'on' : ''}" data-act="note">📝</button>
+        </div>
+      </div>
+      <div class="note-box ${r.note ? 'open' : ''}" data-note-for="${id}">
+        <textarea placeholder="写两句……" data-act="note-input">${esc(r.note || '')}</textarea>
+      </div>`
+  }
+
+  function renderRecords() {
+    const all = []
+    const push = (id, kind, label, meta, r) => { if (r && (r.starred || (r.status && r.status !== 'none') || (r.note && r.note.trim()))) all.push({ id, kind, label, meta, r }) }
+
+    DATA.books.forEach(b => push(itemId('books', b.title), 'books', b.title, b.author, store.items[itemId('books', b.title)]))
+    DATA.docs.forEach(d => push(itemId('docs', d.title), 'docs', d.title, d.meta, store.items[itemId('docs', d.title)]))
+    DATA.youtubers.forEach(y => push(itemId('yt', y.name), 'youtubers', y.name, y.tag, store.items[itemId('yt', y.name)]))
+    DATA.forums.forEach(f => push(itemId('forum', f.name), 'forums', f.name, '', store.items[itemId('forum', f.name)]))
+    DATA.web3.forEach(g => g.items.forEach(i => push(itemId('web3', g.group + i.name), 'web3', i.name, g.group, store.items[itemId('web3', g.group + i.name)])))
+
+    const KIND_LABEL = { books: '书', docs: '纪录片', youtubers: '博主', forums: '论坛', web3: '工具' }
+    const groups = {}
+    all.forEach(x => { (groups[x.kind] = groups[x.kind] || []).push(x) })
+
+    const body = Object.keys(groups).map(k => {
+      const items = groups[k].map(x => {
+        const badges = []
+        if (x.kind === 'books' || x.kind === 'docs') {
+          const st = x.r.status && x.r.status !== 'none' ? STATUS_LABEL[x.kind][x.r.status] : null
+          if (st) badges.push(`<span class="badge done">${st}</span>`)
+        }
+        if (x.r.starred) badges.push(`<span class="badge star">★ 收藏</span>`)
+        return `<div class="rec-item">
+          <span class="badge">${KIND_LABEL[x.kind]}</span>
+          <span class="rn">${esc(x.label)}${x.meta ? ` <span style="color:var(--muted);font-size:12px">· ${esc(x.meta)}</span>` : ''}</span>
+          ${badges.join('')}
+          ${x.r.note && x.r.note.trim() ? `<span class="note">${esc(x.r.note)}</span>` : ''}
+        </div>`
+      }).join('')
+      return `<div class="rec-group"><div class="group-label">${KIND_LABEL[k]}（${items.length}）</div>${items}</div>`
+    }).join('') || `<div class="empty">还没有任何记录。去书单、纪录片或工具里点「收藏 / 想看 / 笔记」吧。</div>`
+
+    $('#records').innerHTML = `
+      <div class="sec-head"><h2>📝 我的记录</h2><span class="desc">标记过的、收藏过的、写过笔记的，都在这里</span></div>
+      <div class="records-toolbar">
+        <button id="export">导出记录</button>
+        <button id="clear" class="danger">清空全部记录</button>
+      </div>
+      ${body}`
+
+    $('#export').onclick = () => {
+      const text = JSON.stringify(store, null, 2)
+      navigator.clipboard?.writeText(text).then(() => toast('记录已复制到剪贴板'))
+        .catch(() => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' })); a.download = 'finance-records.json'; a.click() })
+    }
+    $('#clear').onclick = () => {
+      if (confirm('确定清空所有进度与笔记吗？此操作不可撤销。')) { store = { items: {} }; saveStore(); renderAll(); toast('已清空') }
+    }
+  }
+
+  function renderAll() {
+    renderNav()
+    renderSections()
+  }
+
+  // ---------- interactions ----------
+  function bindCards() {
+    $$('[data-act]').forEach(el => {
+      const card = el.closest('[data-item]') || el.closest('[data-note-for]')
+      const id = card.dataset.item || card.dataset.noteFor
+      const act = el.dataset.act
+
+      if (act === 'status') {
+        el.onclick = () => {
+          const section = id.startsWith('books:') ? 'books' : 'docs'
+          const seq = STATUS[section]
+          const cur = (store.items[id] || {}).status || 'none'
+          const next = seq[(seq.indexOf(cur) + 1) % seq.length]
+          rec(id).status = next
+          saveStore()
+          const label = STATUS_LABEL[section][next]
+          el.textContent = label
+          el.classList.toggle('on', next !== 'none')
+          renderRecords()
+        }
+      } else if (act === 'star') {
+        el.onclick = () => {
+          const r = rec(id)
+          r.starred = !r.starred
+          saveStore()
+          el.classList.toggle('on', r.starred)
+          el.textContent = r.starred ? (el.textContent.includes('收藏') ? '★ 已收藏' : '★') : (el.textContent.includes('收藏') ? '☆ 收藏' : '☆')
+          renderRecords()
+        }
+      } else if (act === 'note') {
+        el.onclick = () => {
+          const box = el.closest('[data-item]').querySelector('.note-box') || $('[data-note-for="' + id + '"]')
+          box.classList.toggle('open')
+          const ta = box.querySelector('textarea')
+          if (box.classList.contains('open')) ta.focus()
+        }
+      } else if (act === 'note-input') {
+        let t
+        const commit = () => { rec(id).note = el.value; saveStore(); renderRecords() }
+        el.addEventListener('input', () => {
+          clearTimeout(t)
+          t = setTimeout(commit, 300)
+        })
+        el.addEventListener('change', commit)
+      }
+    })
+  }
+
+  // ---------- search + scrollspy ----------
+  function doSearch(q) {
+    q = (q || '').trim().toLowerCase()
+    const cards = $$('[data-item]')
+    let visible = 0
+    cards.forEach(c => {
+      const hit = !q || (c.dataset.search || '').toLowerCase().includes(q)
+      c.classList.toggle('hidden', !hit)
+      if (hit) visible++
+    })
+    // hide note boxes of hidden rows
+    $$('.note-box[data-note-for]').forEach(box => {
+      const row = $(`[data-item="${box.dataset.noteFor}"]`)
+      box.style.display = row && !row.classList.contains('hidden') && box.classList.contains('open') ? 'block' : 'none'
+    })
+    // hide empty sections
+    ;['books', 'docs', 'youtubers', 'forums', 'web3'].forEach(sid => {
+      const sec = $('#' + sid)
+      const has = $$('[data-item]:not(.hidden)', sec).length > 0
+      sec.style.display = q && !has ? 'none' : ''
+    })
+    $('#no-result').classList.toggle('show', q && visible === 0)
+    $('#search-clear').classList.toggle('show', !!q)
+    if (q) $('#overview').style.display = 'none'
+    else $('#overview').style.display = ''
+  }
+
+  let searchTimer
+  $('#search').addEventListener('input', (e) => { clearTimeout(searchTimer); searchTimer = setTimeout(() => doSearch(e.target.value), 120) })
+  $('#search-clear').addEventListener('click', () => { $('#search').value = ''; doSearch(''); $('#search').focus() })
+
+  // scrollspy
+  const sections = ['overview', 'books', 'docs', 'youtubers', 'forums', 'web3', 'records']
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        $$('#nav a').forEach(a => a.classList.toggle('active', a.dataset.nav === en.target.id))
+      }
+    })
+  }, { rootMargin: '-20% 0px -70% 0px' })
+  sections.forEach(id => { const s = document.getElementById(id); if (s) io.observe(s) })
+
+  // ---------- boot ----------
+  fetch(DATA_URL)
+    .then(r => { if (!r.ok) throw new Error('data.json ' + r.status); return r.json() })
+    .then(d => { DATA = d; renderAll() })
+    .catch(err => { $('#content').innerHTML = `<div class="empty">加载资料失败：${esc(err.message)}</div>` })
+})()
+</script>
+</body>
+</html>
