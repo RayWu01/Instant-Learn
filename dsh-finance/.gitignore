@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+*.tgz
+
+# downloaded book PDFs (large / not redistributable here)
+gallery/books/
+
+# macOS
+.DS_Store
