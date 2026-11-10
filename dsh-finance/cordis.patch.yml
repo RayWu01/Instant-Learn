@@ -1,0 +1,4 @@
+# 财务自由：Host 半边（资料库页面 + /财务自由 skill）。浏览器半边由 package.json 的 dsh.client 声明加载。
+- insert:
+    - id: finance
+      name: 'dsh-finance'
