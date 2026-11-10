@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "财务自由 · 赚钱投资资料库",
+    "subtitle": "书单 · 纪录片 · 美股博主 · Web3 工具",
+    "source": "https://github.com/codeman008/Financial_freedom",
+    "updated": "2026-11-03",
+    "roadmap": ["学习", "思考", "投资", "自由"],
+    "tagline": "财富自由不是一夜暴富，而是持续学习后的长期复利。"
+  },
+  "books": [
+    { "tier": "入门", "title": "富爸爸穷爸爸", "author": "罗伯特·清崎", "score": 8.3, "blurb": "全球销量第一的理财入门书，已译成 50 多种语言、销量数千万册。帮你直观理解「富人思维 vs 穷人思维」，建立现金流与资产的基本认知。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8%2C%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B.pdf" },
+    { "tier": "入门", "title": "小狗钱钱", "author": "博多·舍费尔", "score": 9.2, "blurb": "欧洲第一理财书，简单好懂：从小教你如何与钱打交道，而不是被钱支配；像富人一样思考、正确认识和使用金钱，学会投资、尽早实现财务自由。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E3%80%8B.pdf" },
+    { "tier": "入门", "title": "穷查理宝典", "author": "彼得·考夫曼", "score": 8.6, "blurb": "收录查理·芒格完整传记与投资哲学，以及近 20 年主要公开演讲与访谈，涵盖投资评估过程、投资原则清单与投资建议。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8%E3%80%8B.pdf" },
+    { "tier": "入门", "title": "纳瓦尔宝典", "author": "埃里克·乔根森", "score": 8.4, "blurb": "2022 年出版，收录纳瓦尔在推特、博客、访谈中的观点，放到今天仍不过时。赚钱不是靠埋头苦干，而是充分利用杠杆。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8%E3%80%8B.pdf" },
+    { "tier": "入门", "title": "投资中最简单的事", "author": "邱国鹭", "score": 8.7, "blurb": "难得的国人写的高质量理财书，提出「便宜是硬道理」「数月亮不数星星」等普通人能懂的投资原则，选股、择时、估值契合巴菲特价值投资。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E6%8A%95%E8%B5%84%E4%B8%AD%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E3%80%8B.pdf" },
+    { "tier": "入门", "title": "聪明的投资者", "author": "本杰明·格雷厄姆", "score": 8.8, "blurb": "投资实务领域世界级、跨世纪的经典，被称为「股市圣经」。作者格雷厄姆是「华尔街之父」、巴菲特的老师，介绍防御型与进取型投资者的组合策略。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E8%81%AA%E6%98%8E%E7%9A%84%E6%8A%95%E8%B5%84%E8%80%85%E3%80%8B(%E7%BE%8E)%E6%9C%AC%E6%9D%B0%E6%98%8E%C2%B7%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86.pdf" },
+    { "tier": "入门", "title": "指数基金投资指南", "author": "银行螺丝钉", "score": 8.2, "blurb": "专注低估值指数基金投资，系统讲解各类指数基金及有效策略，教你「买什么、怎么买；卖什么、怎么卖」。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97%E3%80%8B.pdf" },
+    { "tier": "进阶", "title": "投资最重要的事", "author": "霍华德·马克斯", "score": 8.7, "blurb": "核心概念：第二层思维、价格与价值的关系、耐心等待机会、多元化投资；鼓励做「逆向投资者」，判断市场周期，胆大心细地获得回报。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E6%8A%95%E8%B5%84%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%BA%8B%E3%80%8B.pdf" },
+    { "tier": "进阶", "title": "证券分析", "author": "本杰明·格雷厄姆", "score": 9.0, "blurb": "巴菲特大学时用的教材，系统讲解价值投资的实务方法，畅销八十年的经典中的经典。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E8%AF%81%E5%88%B8%E5%88%86%E6%9E%90%E3%80%8B%E6%9C%AC%E6%9D%B0%E6%98%8E%E2%80%A2%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86.pdf" },
+    { "tier": "进阶", "title": "股市进阶之道", "author": "李杰", "score": 8.7, "blurb": "写给散户，凝结作者数十年经验。核心分三部分，对应投资之道、价值之源、估值之谜。" },
+    { "tier": "进阶", "title": "怎样选择成长股", "author": "菲利普·A·费雪", "score": 8.7, "blurb": "作者被誉为「成长股投资之父」，华尔街最受尊敬、最具影响力的投资人之一，投资哲学深刻影响巴菲特、彼得·林奇等大师。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E6%80%8E%E6%A0%B7%E9%80%89%E6%8B%A9%E6%88%90%E9%95%BF%E8%82%A1%E3%80%8B.pdf" },
+    { "tier": "进阶", "title": "一本书读懂财报（全新修订版）", "author": "肖星", "score": 8.9, "blurb": "财报解读与分析的经典，被读者称为「我读过最好的财务入门书」，从资产负债表、利润表、现金流量表三大报表讲起。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E4%B8%80%E6%9C%AC%E4%B9%A6%E8%AF%BB%E6%87%82%E8%B4%A2%E6%8A%A5%EF%BC%88%E5%85%A8%E6%96%B0%E4%BF%AE%E8%AE%A2%E7%89%88%EF%BC%89%E3%80%8B.pdf" },
+    { "tier": "高级", "title": "资产配置的艺术", "author": "戴维·达斯特", "score": 7.5, "blurb": "摩根士丹利投资集团创始人、被誉为「资产配置第一人」，系统讲解如何用现代资产配置理念组合股票、债券、现金、黄金、房产等资产。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E7%9A%84%E8%89%BA%E6%9C%AF(%E9%AB%98%E6%B8%85)%E3%80%8B.pdf" },
+    { "tier": "高级", "title": "乌合之众", "author": "古斯塔夫·勒庞", "score": 8.8, "blurb": "社会心理学领域最具影响力的著作，精妙描绘群体心理；借群体心理理论应用于投资市场，避免随行情情绪波动、防止冲动操作。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E5%8B%92%E5%BA%9E.pdf" },
+    { "tier": "高级", "title": "股票作手回忆录", "author": "埃德温·勒菲弗", "score": 8.8, "blurb": "巴菲特指定股市教材，记录美股史上传奇人物、被称为「华尔街大空头」的杰西·利弗莫尔的投资生涯。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E8%82%A1%E7%A5%A8%E4%BD%9C%E6%89%8B%E5%9B%9E%E5%BF%86%E5%BD%95%E3%80%8B.pdf" },
+    { "tier": "高级", "title": "股市长线法宝（第5版）", "author": "杰里米·西格尔", "score": 8.6, "blurb": "被列为史上十大最佳投资书籍之一，巴菲特评价「这是无价的股市投资指南，投资者应认真研究西格尔的新发现与新观点」。", "pdf": "https://github.com/codeman008/Financial_freedom/blob/main/%E3%80%8A%E8%82%A1%E5%B8%82%E9%95%BF%E7%BA%BF%E6%B3%95%E5%AE%9D%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC5%E7%89%88%EF%BC%89%E3%80%8B.pdf" }
+  ],
+  "docs": [
+    { "rank": 1, "title": "经济机器是如何运行的", "en": "How The Economic Machine Works", "score": 9.5, "meta": "31min · 2008 · 美国", "blurb": "2008 金融危机后，瑞·达利欧在 YouTube 分享的 30 分钟视频，讲清生产率、短期债务周期、长期债务周期的起源。零经济学基础也能看懂。", "link": "https://www.bilibili.com/video/BV1qG4y157qp/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 2, "title": "激荡三十年：1978—2008", "en": "The Great Stirring", "score": 9.3, "meta": "30min×31 · 2008 · 中国", "blurb": "以编年体讲述中国改革开放 1978—2008 的重大经济事件：袁庚开发蛇口、1999 融入世界、2003 房地产热潮、2008 攻坚克难……", "link": "https://www.bilibili.com/video/BV1Hb411k7vo/?spm_id_from=333.337.search-card.all.click" },
+    { "rank": 3, "title": "美国商业大亨传奇", "en": "The Men Who Built America", "score": 9.3, "meta": "40min×8 · 2012 · 美国", "blurb": "美国不是被发现的，而是被建造的。洛克菲勒、范德比尔特、卡内基、福特、摩根——这些人就是美国梦的代名词。", "link": "https://www.bilibili.com/video/BV1o5411f75Z/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 4, "title": "资本的故事（第1-3季）", "en": "The Story of Capital", "score": 8.7, "meta": "8min×60 · 2013/2015 · 中国", "blurb": "从股票的诞生到次贷危机，四百年间 20 个精彩的资本故事。", "link": "https://www.bilibili.com/video/BV1mW411J7ED/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 5, "title": "华尔街", "en": "Wall Street", "score": 8.6, "meta": "44min×10 · 2010 · 中国", "blurb": "以华尔街金融危机为切入点，聚焦证券市场，梳理两百多年来现代金融的来龙去脉，探寻资本市场兴衰与经济波动的规律。", "link": "https://www.bilibili.com/video/BV1Wb4y1H71b/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 6, "title": "安然：房间里最聪明的人", "en": "Enron: The Smartest Guys in the Room", "score": 8.4, "meta": "110min · 2005 · 美国", "blurb": "华尔街史上最大商业丑闻。安然案不仅让五大会计所之一安达信被吊销执照、重创麦肯锡，还迫使所有商学院重新教学生「伦理与道德」。", "link": "https://www.bilibili.com/video/BV1xZ4y1Z7fy/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 7, "title": "货币崛起", "en": "The Ascent of Money", "score": 8.6, "meta": "48min×6 · 2008 · 英国", "blurb": "用最简单的方式讲复杂金融现象。「钱」究竟是什么？从哪来、到哪去，又如何影响我们的社会？", "link": "https://www.bilibili.com/video/BV1kT4y1Y79M/?spm_id_from=333.337.search-card.all.click" },
+    { "rank": 8, "title": "监守自盗", "en": "Inside Job", "score": 8.7, "meta": "109min · 2010 · 美国", "blurb": "2008 全球金融海啸，损失高达 20 万亿美元。本片通过详尽数据与采访金融业巨头、政客、记者，揭露金融掠夺者的崛起与行业、学术界腐败政策背后的真相。", "link": "https://www.bilibili.com/video/BV1S24y1r7kS/?spm_id_from=333.337.search-card.all.click" },
+    { "rank": 9, "title": "与全世界做生意", "en": "Doing Business with the World", "score": 8.8, "meta": "50min×7 · 2015 · 中国", "blurb": "讲述中国与世界之间的 30 多个商业故事，摄制组奔赴亚、非、欧、北美、南美、南极六大洲实地拍摄与采访。", "link": "https://www.bilibili.com/video/BV1ya411u79w/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 10, "title": "制高点：世界经济之战", "en": "Commanding Heights", "score": 9.0, "meta": "120min×3 · 2004 · 美国", "blurb": "普利策奖得主丹尼尔·耶金的金融巨作，被西方媒体称为「我们这个时代经济制度的编年史」，全景式描绘从政府到市场的演进。", "link": "https://www.bilibili.com/video/BV17V411C7m2/?spm_id_from=333.337.search-card.all.click" },
+    { "rank": 11, "title": "公司的力量", "en": "The Power of the Company", "score": 8.7, "meta": "44min×10 · 2010 · 中国", "blurb": "中国第一部深入探讨公司制度的电视纪录片，梳理公司的起源、发展、演变与创新，探讨公司组织与经济制度、思想文化、技术创造、社会生活的相互促进。", "link": "https://www.kanjuda.com/con/?81870.html" },
+    { "rank": 12, "title": "成为沃伦·巴菲特", "en": "Becoming Warren Buffett", "score": 8.6, "meta": "88min · 2017 · 美国", "blurb": "讲述内布拉斯加的小男孩如何成为世界上最受尊敬的人之一，含独家拍摄、从未公开的巴菲特家庭影像；带你思考：当金钱不再有意义，什么最重要。", "link": "https://www.bilibili.com/video/BV1cd4y1F7wN/?spm_id_from=333.337.search-card.all.click" },
+    { "rank": 13, "title": "崩盘世界的银行", "en": "The Bank That Crashed the World", "score": 7.9, "meta": "56min · 2009 · 美国", "blurb": "美国第四大投行濒临倒闭之际，各大银行 CEO 被召到华尔街会议室研究如何拯救美国经济；美林为自救被迫卖身花旗，整个市场意外陷入信贷崩溃。", "link": "https://www.bilibili.com/video/BV1bs41137Ag/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 14, "title": "美国工厂", "en": "American Factory", "score": 8.4, "meta": "110min · 2019 · 美国", "blurb": "2019 年纪录片，讲述中国玻璃制造商福耀集团投资美国俄亥俄州代顿，把前通用汽车装配厂重开为玻璃工厂的故事。", "link": "https://www.iyf.tv/play/7FKb2T1x6u6" },
+    { "rank": 15, "title": "百万美元交易员", "en": "Million Dollar Traders", "score": 8.4, "meta": "60min×3 · 2009 · 英国", "blurb": "BBC 纪录片。交易不是游戏，而是一份工作；记住工作中不带情绪，以及自律与纪律的重要性。", "link": "https://www.bilibili.com/video/BV19a411X7eY/?spm_id_from=333.337.search-card.all.click&vd_source=13bb387b563159aefe17ca100123ce76" },
+    { "rank": 16, "title": "资本主义：一个爱情故事", "en": "Capitalism: A Love Story", "score": 8.3, "meta": "127min · 2009 · 美国", "blurb": "2008 金融风暴席卷全球之际，纪录片导演迈克尔·摩尔再次拿起镜头，试图揭露政客与商人盘剥大众、聚敛财富的真面目。", "link": "https://www.dandanzan.com/dianying/56602.html" }
+  ],
+  "youtubers": [
+    { "name": "ARKInvest", "tag": "女版巴菲特", "blurb": "凯西·伍德创立的 ARK，近年投资业绩突出、获华尔街认可，特斯拉一战成名。附跟踪 ARK 历史交易记录的 ArkTrack / Ark Tracker 工具。", "link": "https://www.youtube.com/c/Arkinvest2015/videos" },
+    { "name": "老李玩钱", "tag": "长期散户首选", "blurb": "最适合长期散户学习跟进的频道：及时分享个股观察清单、最新持仓与理由、账户仓位变化，组合与风格很适合长线散户。", "link": "https://www.youtube.com/channel/UCo2gxyermsLBSCxFHvJs0Zg/videos" },
+    { "name": "刘翔投资频道", "tag": "价值投资", "blurb": "功底扎实的价值投资者，擅长多空两面分析，内容硬核但客观。不直接给结论，而是汇总多空观点让你自己判断，强调「投资最重要的是独立思考」。", "link": "https://www.youtube.com/channel/UC0e5c4U67Vm6sAVK0vxN3Uw/videos" },
+    { "name": "小楠 Curtis 投资成长空间", "tag": "荐股 + 财报", "blurb": "较年轻博主，常荐股、分析较具体，巴菲特铁粉，组合里巴菲特相关股多；少数会带人读财报的博主。观点略主观，建议独立思考、别照抄。", "link": "https://www.youtube.com/channel/UC8AA0Ao2ZHxNWZu0ZFdRZxw/videos" },
+    { "name": "Nana 说美股", "tag": "高频财经", "blurb": "更新频繁、逻辑清晰的美女财经博主，内容轻松但不缺专业。缺点是每期偏长，天天看有点累。", "link": "https://www.youtube.com/results?search_query=Nana%E8%AF%B4%E7%BE%8E%E8%82%A1" },
+    { "name": "Beckie Analysis", "tag": "日内/短线", "blurb": "适合日内或短线交易者学习。本人多做盘中或中短线分析交易，善用技术分析看支撑/阻力与各类指标。缺点是中长线把握一般。", "link": "https://www.youtube.com/channel/UC93Gp4PWv7A53p33BEYOBrA" },
+    { "name": "北美韭菜日记", "tag": "综合财经", "blurb": "团结、紧张、严肃、活泼的财经频道：美股推荐、行情跟踪、时政评论、投资经验、理财知识讲解。", "link": "https://www.youtube.com/channel/UC8M4N8ExIxASPPMvmtab7KQ/videos" },
+    { "name": "Andy 美股大鲨鱼", "tag": "宏观 + 模型预测", "blurb": "擅长综合大盘宏观局势，用美股大数据建模预测未来一周到一个月走势，对资金流强弱、牛熊/震荡模型把握较准。缺点是短线技术分析少、说话爱故弄玄虚。", "link": "https://www.youtube.com/channel/UCwYKBYQrHv13P_pGlNdwl0A" },
+    { "name": "Bella 谈财经", "tag": "专注个股", "blurb": "不整花活、认真聊股。曾在特斯拉拆股前预测 TSLA 可能到 2000，拭目以待。", "link": "https://www.youtube.com/channel/UCVomjkM_t0EcctTWSE1Jvxg/videos" },
+    { "name": "Jason Lee 美股技术分析", "tag": "量价 + 均线", "blurb": "擅长量价关系、均线、主力资金成本区与进出意愿分析，以及主力与散户的心理博弈。适合想学量价与均线分析的人。", "link": "https://www.youtube.com/channel/UCvSTmMoHBBQskaGX7BdTeiQ/videos" },
+    { "name": "Victor 美股投资频道", "tag": "江恩交易系统", "blurb": "结合江恩交易系统，以长线趋势为核心规则、顺势而为、尊重规则交易；每周预判下周大盘走势，目前准确率胜负比不错。", "link": "https://www.youtube.com/channel/UClzA2Ebxj7P_x4cgaqFj-Hw/videos" },
+    { "name": "千千湾 VIP 俱乐部", "tag": "江恩 + 庄股", "blurb": "结合江恩理论预判短期趋势，长期跟踪部分活跃个股，尤擅量价关系埋伏庄股、突破趋势线追涨；也做部分周度期权。", "link": "https://www.youtube.com/channel/UCL7YwKgoagiP1u1UCYXaKRA" },
+    { "name": "十爷全球财经", "tag": "新闻汇总解读", "blurb": "自认是收集、汇总、解读新闻信息最好的频道，适合散户快速获取可能影响股市的资讯；博主会实时公布个人操作，止盈止损目标特别清晰。", "link": "https://www.youtube.com/channel/UCFQsi7WaF5X41tcuOryDk8w/videos" },
+    { "name": "小左第一视角", "tag": "日更 + 个股点评", "blurb": "日更频道，除解读当日新闻与最新行情，还会按粉丝偏好重点分析个股；每周有「个股点评大礼包」。", "link": "https://www.youtube.com/channel/UCH60IM5V3OO2LrNIDueG26Q/videos" },
+    { "name": "Captain 美股日志", "tag": "空间分割 + 财报", "blurb": "擅长用空间分割法分析大盘走势、解读公司财报，对重要时事有独到见解；性格沉稳、交易经验丰富，适合心慌的人跟进学习。", "link": "https://www.youtube.com/user/xiadaocaptain" },
+    { "name": "飞云金角", "tag": "技术 + 心态", "blurb": "技术讲解清楚，心态与炒股哲学是精华，人称「股市里的李永乐老师」。", "link": "https://www.youtube.com/channel/UCg9zI64pEB_3xwJPur6isiQ" },
+    { "name": "C&K GO!", "tag": "宏观独立见解", "blurb": "见解最独特、最独立思考的频道，对整个宏观经济有洞察；CK 偏好稳健分红股（作者自认非其风格）。", "link": "https://www.youtube.com/c/CKGOChannelShow/videos" },
+    { "name": "海哥说美股", "tag": "直播实操", "blurb": "动作大、敢想敢做，看不上「涨跌都对」的两头话博主，直接直播操作，动辄上下几万；视频不太精致、略显粗糙。", "link": "https://www.youtube.com/channel/UCwEjsGIDsc2dQVH30mliMQw/videos" },
+    { "name": "西部美股投资人 Harry", "tag": "实盘公开", "blurb": "几个月把 10 万美元做到 50 多万，账户公开；重仓蔚来，计划两年做百万。操作天马行空、自有见地，可惜视频更新不勤。", "link": "https://www.youtube.com/channel/UCTdvHwEWVhZfXxrYYZicEqw/videos" },
+    { "name": "和我聊聊钱", "tag": "退休账户/税务", "blurb": "北美人理财「一姐」，CPA + CFA，四大与基金背景，讲 401k、IRA、Roth 等退休账户与税务较多，内容专业可靠；适合职场新人、新移民。", "link": "https://www.youtube.com/channel/UC5RtC9dKUJ9noJ4C6N4XnmQ" },
+    { "name": "Bayfamily 和 Tinkerbell", "tag": "房产 + 理财", "blurb": "贝班是北美理财中文书《会走路的钱》作者，理工背景、分析专业，爱讲房产，视频全是 PPT+数据驱动；Tinkerbell 讲日常理财、活泼可爱。缺点是更新慢、双人内容偶有割裂。", "link": "https://www.youtube.com/channel/UCs4fF4fs-lOgiqgQd7tAsvA/videos" },
+    { "name": "熊熊 TV", "tag": "电商创业 + 理财", "blurb": "理工出身，因找不到好工作创业，3 年靠亚马逊电商赚到第一个 100 万；除电商创业还讲北美理财、税务抵扣等普通人学不到的知识。适合有创业梦的年轻人，缺点是频道新、更新慢。", "link": "https://www.youtube.com/channel/UCTG3p6A7PsMdHt0fa5-74tg" },
+    { "name": "卡神 Shin li", "tag": "小资理财/信用卡", "blurb": "主打小资理财：各种省钱方法、最划算的移动支付组合、最优惠的数位银行活动、信用卡优惠汇总，并帮你挑适合的信用卡。", "link": "https://www.youtube.com/channel/UCK-qc_POQZwWrMg-Pr-oYtg" }
+  ],
+  "forums": [
+    { "name": "Seeking Alpha", "blurb": "美股版雪球，英文个股讨论社区，部分文章免费部分付费；学术研究发现这些文章与讨论有价值、能预测个股。", "link": "https://seekingalpha.com/" },
+    { "name": "markets.businessinsider", "blurb": "查看美股盘前盘后波动的网站。", "link": "https://markets.businessinsider.com/mymarkets/watchlist" },
+    { "name": "FINVIZ", "blurb": "最好用的美股筛选器；看懂一家公司后，可配合 Seeking Alpha 跟踪最新动态。", "link": "https://finviz.com/" },
+    { "name": "美股之家导航", "blurb": "汇总全面实用的美股相关网站，解决国内投资者交易美股的信息查询与提供工具。", "link": "https://www.meiguhome.com/wzdh/" },
+    { "name": "七券阁 · 美股常用网站总结", "blurb": "汇总涨跌、新股、ETF、恐慌指数等数据的网站清单，交易前必备。", "link": "http://www.qiquange.com/438.html" }
+  ],
+  "web3": [
+    { "group": "主要交易所", "items": [
+      { "name": "Binance", "note": "最大交易所，大资金优先", "link": "https://accounts.binance.com/zh-CN/register?ref=RWIMTPK2" },
+      { "name": "OKX", "note": "前三交易所，出入金方便", "link": "https://www.okx.com/join/dayu888" },
+      { "name": "抹茶 MEXC", "note": "打新必备，无需认证", "link": "https://www.mexc.com/zh-CN/register?inviteCode=1Jk7z" },
+      { "name": "Gate", "note": "老牌交易所，适合跟单", "link": "https://www.gate.io/ref/368032" }
+    ] },
+    { "group": "币圈工具 · 币种行情", "items": [
+      { "name": "CMC", "note": "CoinMarketCap 行情", "link": "https://coinmarketcap.com/" },
+      { "name": "Coingecko", "note": "行情与项目信息", "link": "https://www.coingecko.com/" },
+      { "name": "Unlocks", "note": "代币解锁日历", "link": "https://token.unlocks.app/" }
+    ] },
+    { "group": "币圈工具 · K线图表", "items": [
+      { "name": "DexTools", "note": "链上 K 线", "link": "https://www.dextools.io/app/cn/pairs" },
+      { "name": "TradingView", "note": "专业图表", "link": "https://www.tradingview.com/" },
+      { "name": "Aicoin", "note": "中文行情", "link": "https://www.aicoin.com/" }
+    ] },
+    { "group": "币圈工具 · 跨链", "items": [
+      { "name": "Orbiter", "note": "跨链桥", "link": "https://www.orbiter.finance/?source=Optimism&dest=Ethereum" },
+      { "name": "ZigZag", "note": "跨链桥", "link": "https://trade.zigzag.exchange/bridge" },
+      { "name": "Hop", "note": "跨链桥", "link": "https://hop.exchange/" }
+    ] },
+    { "group": "币圈工具 · DEX", "items": [
+      { "name": "1inch", "note": "聚合交易", "link": "https://app.1inch.io/#/1/simple/swap/ETH/DAI" },
+      { "name": "Uniswap", "note": "龙头 DEX", "link": "https://uniswap.org/" },
+      { "name": "Cowswap", "note": "MEV 保护", "link": "https://swap.cow.fi/#/1/swap/WETH" }
+    ] },
+    { "group": "币圈工具 · 钱包", "items": [
+      { "name": "Metamask", "note": "主流钱包", "link": "https://metamask.io/" },
+      { "name": "IMtoken", "note": "老牌钱包", "link": "https://token.im/" },
+      { "name": "TP", "note": "TokenPocket 多链钱包", "link": "https://www.tokenpocket.pro/" }
+    ] },
+    { "group": "币圈工具 · BTC 生态", "items": [
+      { "name": "Unisat", "note": "BTC 铭文/符文", "link": "https://unisat.io/" },
+      { "name": "MagicEden", "note": "Ordinals 市场", "link": "http://magiceden.io/ordinals" }
+    ] },
+    { "group": "DeFi 工具", "items": [
+      { "name": "Dune", "note": "链上数据面板", "link": "https://dune.xyz/" },
+      { "name": "Messari", "note": "研究仪表盘", "link": "https://messari.io/asset/gmx" },
+      { "name": "KingData", "note": "数据下载", "link": "https://kingdata.com/download/?code=23lf&lang=cn" },
+      { "name": "Terminal", "note": "Token Terminal 财务数据", "link": "https://tokenterminal.com/terminal" },
+      { "name": "Defillama", "note": "TVL 数据", "link": "https://defillama.com/" },
+      { "name": "CryptoFees", "note": "手续费数据", "link": "https://cryptofees.info/" },
+      { "name": "UltraSoundMoney", "note": "ETH 燃烧", "link": "https://ultrasound.money/" },
+      { "name": "L2beat", "note": "L2 扩容数据", "link": "https://l2beat.com/scaling/tvl/" },
+      { "name": "Lido", "note": "流动性质押", "link": "https://stake.lido.fi/?ref=0x7A470d8014a122245b0410774618B7ED0E990Daa" },
+      { "name": "Nanoly", "note": "质押工具", "link": "https://nanoly.com/" },
+      { "name": "Apytop", "note": "APY 排行", "link": "https://apy.top/" },
+      { "name": "Mycointool", "note": "批量工具", "link": "https://mct.xyz/" },
+      { "name": "链研社", "note": "仪表盘", "link": "https://lianyanshe.com/cryptocurrency/dashboard" }
+    ] },
+    { "group": "NFT 交易", "items": [
+      { "name": "Blur", "note": "专业 NFT 市场", "link": "https://blur.io/" },
+      { "name": "Opensea", "note": "最大 NFT 市场", "link": "https://opensea.io/" },
+      { "name": "MagicEden", "note": "多链 NFT 市场", "link": "https://magiceden.io/" },
+      { "name": "NFTGo", "note": "鲸鱼追踪", "link": "https://nftgo.io/whale-tracking/trade" },
+      { "name": "UNIQ", "note": "NFT 数据", "link": "https://uniq.cx/" },
+      { "name": "NFTeye", "note": "NFT 数据", "link": "https://nfteye.io/" },
+      { "name": "Cryptoslam", "note": "链上工具", "link": "https://cryptoslam.io/" },
+      { "name": "B4fomo", "note": "链上工具", "link": "https://www.b4fomo.io/invited?address=vUCq22" },
+      { "name": "NFTInspect", "note": "头像影响力", "link": "https://www.nftinspect.xyz/rank" }
+    ] },
+    { "group": "相关新闻", "items": [
+      { "name": "Followin", "note": "中文加密资讯", "link": "https://followin.io/zh-Hant" },
+      { "name": "Coingecko", "note": "行情与新闻", "link": "https://www.coingecko.com/" }
+    ] },
+    { "group": "其他工具", "items": [
+      { "name": "LookIntoBitcoin", "note": "比特币全部模型与数据（恐惧贪婪、彩虹图、S2F、MVRV 等）", "link": "https://www.lookintobitcoin.com/charts/" },
+      { "name": "8marketcap", "note": "全球资产市值排行", "link": "https://8marketcap.com/" },
+      { "name": "Token Terminal", "note": "加密应用财务数据聚合平台", "link": "https://tokenterminal.com" },
+      { "name": "Token Unlocks", "note": "代币解锁分析仪表盘", "link": "https://token.unlocks.app" },
+      { "name": "MacroMicro", "note": "可视化宏观金融数据", "link": "https://www.macromicro.me/en" },
+      { "name": "CypherHunter", "note": "加密领域的「天眼查」", "link": "https://cypherhunter.com/en/" },
+      { "name": "Twitterscore", "note": "加密项目推特追踪", "link": "https://twitterscore.io/" },
+      { "name": "Staking Rewards", "note": "质押数据全面了解", "link": "https://www.stakingrewards.com/" },
+      { "name": "CryptoRank", "note": "加密基金与大佬投资人", "link": "https://cryptorank.io/funds" },
+      { "name": "Crunchbase", "note": "公司数据查询与跟踪", "link": "https://www.crunchbase.com/" },
+      { "name": "The Block Data", "note": "一站式加密研究与分析", "link": "https://www.theblockcrypto.com/data" }
+    ] }
+  ]
+}
